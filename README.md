@@ -9,6 +9,7 @@ It's the **realistic target** in the vuln-scan workshop. Its bugs are hidden the
 | Repo | What it is |
 |---|---|
 | **ticketdesk-python** (this repo) | Realistic FastAPI target |
+| [ticketdesk-js](https://github.com/karthikeyanchand/ticketdesk-js) | The same product in Express + TypeScript |
 | [vulnlab-python-basics](https://github.com/karthikeyanchand/vulnlab-python-basics) / [vulnlab-js-basics](https://github.com/karthikeyanchand/vulnlab-js-basics) | Small warm-up targets |
 | [vuln-scan-skill](https://github.com/karthikeyanchand/vuln-scan-skill) | The Codex agent skill that scans it |
 | [vuln-scan-workshop](https://github.com/karthikeyanchand/vuln-scan-workshop) | Notebook that runs each stage and scores the results |
