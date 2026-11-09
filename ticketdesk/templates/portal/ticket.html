@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>#{{ ticket.id }} {{ ticket.subject }} · TicketDesk</title>
+  <style>
+    body { font: 15px/1.5 system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #1f2933; }
+    .meta { color: #616e7c; font-size: 13px; }
+    .comment { border-top: 1px solid #e4e7eb; padding: 1rem 0; }
+    .comment .body p { margin: .4rem 0; }
+  </style>
+</head>
+<body>
+  <h1>#{{ ticket.id }} {{ ticket.subject }}</h1>
+  <p class="meta">Status: {{ ticket.status.value }} · Priority: {{ ticket.priority.value }}</p>
+  <p>{{ ticket.description }}</p>
+
+  {% for c in comments %}
+  <div class="comment">
+    <div class="meta">{{ c.author.full_name or c.author.email }} · {{ c.created_at.strftime("%Y-%m-%d %H:%M") }}</div>
+    {# comment bodies are rendered from markdown to HTML, so keep the markup #}
+    <div class="body">{{ c.html | safe }}</div>
+  </div>
+  {% endfor %}
+</body>
+</html>

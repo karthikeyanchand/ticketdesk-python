@@ -1,0 +1,9 @@
+Hi {{ recipient.full_name or recipient.email }},
+
+There is a new reply on ticket #{{ ticket.id }} "{{ ticket.subject }}":
+
+{{ comment.body }}
+
+Reply to this email or open the ticket in your portal.
+
+-- TicketDesk
